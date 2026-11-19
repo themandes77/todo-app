@@ -9,6 +9,11 @@ body {
     color: white;
 }
 
+dialog {
+    background-color: #292929;
+    border: none;
+}
+
 .container {
     position: relative;
     display: flex;
@@ -45,6 +50,33 @@ input[type=text]:focus {
     border-radius: 0%;
     border: 3px solid #BE57FF;
     box-shadow: none;
+}
+
+h2 {
+    font-family: "Shippori Antique";
+    color: #D9D9D9;
+}
+
+.boardGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    gap: 10px;    
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 100px);
+}
+
+.boardGrid button {
+    width: 200px;
+    background-color: #292929;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0%;
+    height: 100px;
+    color: #d6a8fbFF;
+    font-family: "Shippori Antique";
+    cursor: pointer;
 }
 
 .container input {

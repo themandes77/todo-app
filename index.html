@@ -18,6 +18,18 @@
     <div class="container">
       <input type="text" placeholder="Search"></input>
     </div>
+    <h2> Your boards </h2>
+    <div class="boardGrid" id="boardGrid">
+        <button id="addBoard"> Add Board </button>
+    </div>
+
+    <dialog id="boardModal">
+        <h2> create new board </h2>
+        <input type="text" id="boardName" placeholder="Board Name">
+        <button id="createBoard">Create</button>
+        <button id="cancel">Cancel</button>
+    </dialog>
+
   </body>
   <script src="./renderer.js"></script>
 </html>

@@ -1,9 +1,29 @@
-const information = document.getElementById('info')
-information.innerText = `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()})`
+const modal = document.getElementById('boardModal');
+const closeModal = document.getElementById('cancel');
+const createBoard = document.getElementById('createBoard');
 
-const func = async () => {
-    const response = await window.versions.ping()
-    console.log(response)
+const boardName = document.getElementById('boardName');
+
+function addNewBoard() {
+    if (boardName.value.trim() == '') return;
+
+    const newBoard = document.createElement('button');
+    newBoard.textContent = boardName.value.trim();
+    document.querySelector('.boardGrid').appendChild(newBoard);
+    modal.close();
+
+    boardName.value = '';
 }
 
-func()
+createBoard.addEventListener("click", function() {
+    addNewBoard();
+})
+
+closeModal.addEventListener("click", function() {
+    modal.close();
+})
+
+const addBoard = document.getElementById("addBoard");
+addBoard.addEventListener("click", function() {
+    modal.showModal();
+});
